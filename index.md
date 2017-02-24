@@ -30,7 +30,4 @@ TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
 
 
 <br/>
-:+1: :sparkles: :tada: :rocket: :metal: :octocat: <br/>
-:copyright: :two: :zero: :one: :seven:
-
-
+![](https://assets-cdn.github.com/images/icons/emoji/unicode/00a9.png)![](https://assets-cdn.github.com/images/icons/emoji/unicode/0032-20e3.png) ![](https://assets-cdn.github.com/images/icons/emoji/unicode/0030-20e3.png)![](https://assets-cdn.github.com/images/icons/emoji/unicode/0031-20e3.png)![](https://assets-cdn.github.com/images/icons/emoji/unicode/0037-20e3.png)
