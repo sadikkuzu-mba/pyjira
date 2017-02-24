@@ -30,4 +30,7 @@ TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
 
 
 <br/>
-&copy; 2017
+:+1: :sparkles: :tada: :rocket: :metal: :octocat: <br/>
+:copyright: :two: :zero: :one: :seven:
+
+
