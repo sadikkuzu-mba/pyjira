@@ -14,26 +14,30 @@ password = "SadikKUZU#1" # Number1 as usual;)
 urlJ = "https://aheinsis.atlassian.net/"
 linkJ = "https://aheinsis.atlassian.net/browse/"
 
-def cls(satir=50):
-    print "\n"*int(satir)
-    
-def degerAl(metin):
+def cls(nL=50): # number of lines
+    print "\n"*int(nL)
+
+def getText(txt):
     try:
-        sonuc = input(metin + " >> ")
+        ret = input(txt + " >> ")
     except:
-        sonuc = None
-    return sonuc
+        ret = None
+    return ret
 
 def IwL(id): # IssueWithLink
     id = str(id)
     link = "<a href='"+linkJ+id+"' target=_blank>"+id+"</a>"
     return link
 
-username = degerAl("username")
-password = degerAl("password")
-cls()
 
-jahe = jira.JIRA(urlJ,basic_auth=(username,password))
+try:
+    username = getText("username")
+    password = getText("password")
+    cls()
+
+    jahe = jira.JIRA(urlJ,basic_auth=(username,password))
+except:
+    exit()
 
 TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
 TESTtime = TEST.fields.updated
