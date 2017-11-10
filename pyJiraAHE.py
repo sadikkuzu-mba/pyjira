@@ -29,6 +29,8 @@ def IwL(id): # IssueWithLink
     link = "<a href='"+linkJ+id+"' target=_blank>"+id+"</a>"
     return link
 
+def IssText(Iss): # issue id and summary
+    return str(Iss)+" - "+str(Iss.fields.summary)
 
 try:
     username = getText("username")
@@ -48,20 +50,20 @@ BAtime = BA.fields.updated
 TESTset = set([])
 BAset = set([])
 
-TESTset.add(str(TEST))
-BAset.add(str(BA))
+TESTset.add(IssText(TEST))
+BAset.add(IssText(BA))
 
 if __name__ == "__main__":
     print "Test:",
     print TESTset
     print "BA:",
     print BAset
-    if str(TEST) not in TESTset:
+    if IssText(TEST) not in TESTset:
         print "Test: ",
         print IwL(TEST)
         TESTset.add(str(TEST))
         # postaci.postala(str(TEST), IwL(TEST))
-    if str(BA) not in BAset:
+    if IssText(BA) not in BAset:
         print "BA: ",
         print IwL(BA)
         BAset.add(str(BA))
