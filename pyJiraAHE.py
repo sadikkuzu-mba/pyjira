@@ -32,6 +32,16 @@ def IwL(id): # IssueWithLink
 def IssText(Iss): # issue id and summary
     return str(Iss)+" - "+str(Iss.fields.summary)
 
+def IssDetails(Iss): # issue details
+    print str(Iss)
+    print Iss.fields.summary
+    print "assignee:",
+    print Iss.fields.assignee.displayName
+    print "creator:",
+    print Iss.fields.creator.displayName
+    print "created: "+str(Iss.fields.created)
+    print "updated: "+str(Iss.fields.updated)
+
 try:
     username = getText("username")
     password = getText("password")
