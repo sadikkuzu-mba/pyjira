@@ -64,5 +64,5 @@ if __name__ == "__main__":
     if str(BA) not in BAset:
         print "BA: ",
         print IwL(BA)
-        TESTset.add(str(BA))
+        BAset.add(str(BA))
         # postaci.postala(str(BA), IwL(BA))
