@@ -8,7 +8,12 @@ layout: default
 
 **Open issues (AFP) - Test**
 ```
-project = AHEFENPROD AND status = "To Do" AND assignee in (..test users one by one..) ORDER BY duedate ASC
+project = AHEFENPROD AND status = "To Do" AND filter = 14413 ORDER BY duedate ASC
+```
+
+**FilterHelper14413**
+```
+assignee in (..test users one by one..)
 ```
 
 * * * 
