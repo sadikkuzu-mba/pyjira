@@ -7,7 +7,7 @@
 #
 
 import jira
-# import postaci
+from getpass import getpass
 
 username = "skuzu@anadoluhayat.com.tr"
 password = "SadikKUZU#1" # Number1 as usual;)
@@ -19,7 +19,7 @@ def cls(nL=50): # number of lines
 
 def getText(txt):
     try:
-        ret = input(txt + " >> ")
+        ret = getpass(txt + " >> ")
     except:
         ret = None
     return ret
@@ -72,9 +72,7 @@ if __name__ == "__main__":
         print "Test: ",
         print IwL(TEST)
         TESTset.add(str(TEST))
-        # postaci.postala(str(TEST), IwL(TEST))
     if IssText(BA) not in BAset:
         print "BA: ",
         print IwL(BA)
         BAset.add(str(BA))
-        # postaci.postala(str(BA), IwL(BA))
