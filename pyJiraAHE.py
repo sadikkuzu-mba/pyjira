@@ -8,6 +8,7 @@
 
 import jira
 from getpass import getpass
+from unicodedata import normalize
 
 username = "skuzu@anadoluhayat.com.tr"
 password = "SadikKUZU#1" # Number1 as usual;)
@@ -30,7 +31,8 @@ def IwL(id): # IssueWithLink
     return link
 
 def IssText(Iss): # issue id and summary
-    return str(Iss)+" - "+str(Iss.fields.summary)
+    return str(Iss)+" - "+str(Iss.fields.updated)+" - "+normalize('NFKD', Iss.fields.summary).encode('ascii','ignore')
+    #return str(Iss)+" - "+str(Iss.fields.summary)
 
 def IssDetails(Iss): # issue details
     print str(Iss)
