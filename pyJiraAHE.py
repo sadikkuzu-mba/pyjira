@@ -6,24 +6,11 @@
 # http://stackoverflow.com/questions/30168387/python-jira-return-the-content-of-a-filter
 #
 
-import jira
+import JiraAHE
 from getpass import getpass
 from unicodedata import normalize
 
-username = "skuzu@anadoluhayat.com.tr"
-password = "SadikKUZU#1" # Number1 as usual;)
-urlJ = "https://aheinsis.atlassian.net/"
 linkJ = "https://aheinsis.atlassian.net/browse/"
-
-def cls(nL=50): # number of lines
-    print "\n"*int(nL)
-
-def getText(txt):
-    try:
-        ret = getpass(txt + " >> ")
-    except:
-        ret = None
-    return ret
 
 def IwL(id): # IssueWithLink
     id = str(id)
@@ -44,37 +31,39 @@ def IssDetails(Iss): # issue details
     print "created: "+str(Iss.fields.created)
     print "updated: "+str(Iss.fields.updated)
 
-try:
-    username = getText("username")
-    password = getText("password")
-    cls()
 
-    jahe = jira.JIRA(urlJ,basic_auth=(username,password))
-except:
+jahe = JiraAHE.getJiraAHEobj()
+if jahe is None:
     exit()
 
-TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
-TESTtime = TEST.fields.updated
-
-BA = jahe.search_issues("filter=12100 ORDER BY updated DESC")[0]
-BAtime = BA.fields.updated
-
+TESTflag = False
 TESTset = set([])
-BAset = set([])
+TESTissues = jahe.search_issues("filter=14408 ORDER BY updated DESC")
+if len(TESTissues)>0:
+    TEST = TESTissues[0]
+    TESTtime = TEST.fields.updated
+    TESTset.add(IssText(TEST))
+    TESTflag = True
 
-TESTset.add(IssText(TEST))
-BAset.add(IssText(BA))
+BAflag = False
+BAset = set([])
+BAissues = jahe.search_issues("filter=14409 ORDER BY updated DESC")
+if len(BAissues)>0:
+    BA = BAissues[0]
+    BAtime = BA.fields.updated
+    BAset.add(IssText(BA))
+    BAflag = True
 
 if __name__ == "__main__":
     print "Test:",
     print TESTset
     print "BA:",
     print BAset
-    if IssText(TEST) not in TESTset:
+    if TESTflag and IssText(TEST) not in TESTset:
         print "Test: ",
         print IwL(TEST)
         TESTset.add(str(TEST))
-    if IssText(BA) not in BAset:
+    if BAflag and IssText(BA) not in BAset:
         print "BA: ",
         print IwL(BA)
         BAset.add(str(BA))
