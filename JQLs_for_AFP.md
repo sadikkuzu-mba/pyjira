@@ -60,5 +60,5 @@
 * *https://aheinsis.atlassian.net/issues/?filter=14414*
 * _assignee in (..analyst users one by one..)_ 
 
-:+1: :sparkles: :tada: :rocket: :metal: :octocat: <br/>
-:copyright: :two: :zero: :one: :eight:
+<br/>
+:copyright: :two: :zero: :one: :eight:  :wavy_dash:  :two: :zero: :two: :zero: 
