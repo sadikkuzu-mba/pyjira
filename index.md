@@ -18,7 +18,7 @@ assignee in (..test users one by one..)
 
 * * * 
 
- [pyJiraAHE.py](https://github.com/AHEsadikkuzu/pyJiraAHE/blob/master/pyJiraAHE.py) 
+ [pyJiraAHE.py](https://github.com/sadikkuzu-mba/pyJiraAHE/blob/master/pyJiraAHE.py) 
 ```python
 import jira
 
@@ -35,5 +35,4 @@ TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
 
 
 <br/>
-:+1: :sparkles: :tada: :rocket: :metal: :octocat: <br/>
-:copyright: :two::zero::one::seven: :wavy_dash: :two::zero::one::nine: 
+:copyright: :two::zero::one::seven: :wavy_dash: :two::zero::two::zero: 
