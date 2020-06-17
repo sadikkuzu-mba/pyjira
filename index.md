@@ -4,7 +4,7 @@ layout: default
 
 * * * 
 
-[JQLs for AFP](https://github.com/AHEsadikkuzu/pyJiraAHE/blob/master/JQLs_for_AFP.md#jqls-for-afp)
+[JQLs for AFP](https://github.com/sadikkuzu-mba/pyJiraAHE/blob/master/JQLs_for_AFP.md#jqls-for-afp)
 
 **Open issues (AFP) - Test**
 ```
