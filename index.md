@@ -32,7 +32,3 @@ TEST = jahe.search_issues("filter=11803 ORDER BY updated DESC")[0]
 ```
 
 * * * 
-
-
-<br/>
-:copyright: :two::zero::one::seven: :wavy_dash: :two::zero::two::zero: 
