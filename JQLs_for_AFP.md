@@ -59,6 +59,3 @@
 **FilterHelper14414**
 * *https://aheinsis.atlassian.net/issues/?filter=14414*
 * _assignee in (..analyst users one by one..)_ 
-
-<br/>
-:copyright: :two: :zero: :one: :eight:  :wavy_dash:  :two: :zero: :two: :zero: 
